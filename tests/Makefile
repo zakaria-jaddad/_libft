@@ -15,7 +15,7 @@ OBJ 	= $(SRC:.c=.o)
 NAME 	= libft_test
 
 CFLAGS 	= -Wall -Werror -Wextra -I$(INCLUDE_DIR)
-LFLAGS	= -lcriterion -L$(LIBFT_DIR) -lft -I/opt/homebrew/include/criterion/ -L /opt/homebrew/lib/
+LFLAGS	= -lcriterion -L$(LIBFT_DIR) -lft -I/criterion/ -L ./criterion/lib/
  
 
 HEADER 	= tests.h 
@@ -32,7 +32,7 @@ $(NAME): $(OBJ)
 %.o: %.c
 	$(CC) $< $(CFLAGS) -c -o $(BIN_DIR)/$(notdir $@)
 
-re: $(NAME)
+re: all
 
 libft_all:
 	@$(MAKE) $(MAKE_ARGS) -s -C $(LIBFT_DIR) all
