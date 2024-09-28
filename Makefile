@@ -1,9 +1,13 @@
+MAKE = make
 CC 	= gcc
-SRC 	= ft_memset.c
-OBJ 	= $(SRC:.c=.o)
 NAME 	= libft.a
 CFLAGS 	= -Wall -Werror -Wextra -o
 HEADER 	= libft.h
+SRC 	= ft_memset.c \
+	  ft_strnstr.c
+OBJ 	= $(SRC:.c=.o)
+
+TEST_DIR = tests/
 
 
 all: $(NAME)
@@ -19,6 +23,7 @@ clean:
 
 fclean: clean
 	rm -rf  $(NAME)
+	rm -rf main
 
 re: fclean $(NAME) 
 
