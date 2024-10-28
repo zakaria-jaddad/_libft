@@ -78,6 +78,11 @@ int ft_isalpha_tests(void)
           .expected_output = 0,
       },
       {
+          .desc = "ft_isalpha(-150)",
+          .s = -150,
+          .expected_output = 0,
+      },
+      {
           .desc = "ft_isalpha(-1)",
           .s = -1,
           .expected_output = 0,

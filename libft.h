@@ -6,7 +6,7 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:19:49 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/10/26 00:51:02 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/10/28 22:20:15 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -191,5 +191,14 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
  * ft_atoi ascii to integer
  */
 int		ft_atoi(const char *str);
+
+
+/*
+ w ft_calloc function contiguously allocates enough space 
+ * for count objects that are size bytes of memory each 
+ * and returns a pointer to the allocated memory.
+ * The allocated memory is filled with bytes of value zero.
+ */
+void	*ft_calloc(size_t count, size_t size);
 
 #endif

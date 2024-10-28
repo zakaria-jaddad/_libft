@@ -70,6 +70,11 @@ int ft_isalnum_tests(void)
           .expected_output = 0,
       },
       {
+          .desc = "ft_isalpha(-150)",
+          .s = -150,
+          .expected_output = 0,
+      },
+      {
           .desc = "ft_isalnum(-1)",
           .s = -1,
           .expected_output = 0,

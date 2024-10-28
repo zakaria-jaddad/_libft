@@ -68,6 +68,11 @@ int ft_isascii_tests(void)
           .expected_output = isascii(400000),
       },
       {
+          .desc = "ft_isalpha(-150)",
+          .s = -150,
+          .expected_output = 0,
+      },
+      {
           .desc = "ft_isascii(-1)",
           .s = -1,
           .expected_output = 0,

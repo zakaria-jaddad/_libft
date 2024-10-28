@@ -1,5 +1,4 @@
 #include "../include/test.h"
-#include <string.h>
 
 typedef struct test
 {

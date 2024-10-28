@@ -6,7 +6,7 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 17:31:39 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/10/22 18:18:38 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:12:08 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -15,8 +15,11 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s++ == (char) c)
+		if (*s == (char) c)
 			return ((char *) s);
+		s++;
 	}
-	return NULL;
+	if (*s == c)	
+		return ((char *) s);
+	return (NULL);
 }

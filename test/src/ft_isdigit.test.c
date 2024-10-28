@@ -123,6 +123,11 @@ int ft_isdigit_tests(void)
           .expected_output = 0,
       },
       {
+          .desc = "ft_isalpha(-150)",
+          .c = -150,
+          .expected_output = 0,
+      },
+      {
           .desc = 0,
       },
   };

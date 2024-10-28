@@ -4,7 +4,7 @@ int main(void)
 {
   ft_isalpha_tests();
   ft_isdigit_tests();
-  ft_isalpha_tests();
+  ft_isalnum_tests();
   ft_isascii_tests();
   ft_isprint_tests();
   ft_strlen_tests();
@@ -12,5 +12,15 @@ int main(void)
   ft_bzero_tests();
   ft_memcpy_tests();
   ft_memmove_tests();
+  ft_strlcpy_tests();
+  ft_strlcat_tests();
+  ft_toupper_tests();
+  ft_tolower_tests();
+  ft_strchr_tests();
+  ft_strncmp_tests();
+  ft_memchr_tests();
+  ft_memcmp_tests();
+  ft_strnstr_tests();
+  ft_atoi_tests();
   return 0;
 }

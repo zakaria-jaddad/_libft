@@ -22,4 +22,15 @@ int ft_memset_tests(void);
 int ft_bzero_tests(void);
 int ft_memcpy_tests(void);
 int ft_memmove_tests(void);
+int ft_strlcpy_tests(void);
+int ft_strlcat_tests(void);
+int ft_toupper_tests(void);
+int ft_tolower_tests(void);
+int ft_strchr_tests(void);
+int ft_strncmp_tests(void);
+int ft_memchr_tests(void);
+int ft_memcmp_tests(void);
+int ft_strnstr_tests(void);
+int ft_atoi_tests(void);
+
 #endif
