@@ -32,5 +32,11 @@ int ft_memchr_tests(void);
 int ft_memcmp_tests(void);
 int ft_strnstr_tests(void);
 int ft_atoi_tests(void);
+int ft_calloc_tests(void);
+int ft_strdup_tests(void);
+int ft_substr_tests(void);
+int ft_strjoin_tests(void);
+int ft_strtrim_tests(void);
+int ft_split_tests(void);
 
 #endif

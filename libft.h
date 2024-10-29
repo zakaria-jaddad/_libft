@@ -6,7 +6,7 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:19:49 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/10/28 22:20:15 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/10/29 03:32:16 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -194,11 +194,55 @@ int		ft_atoi(const char *str);
 
 
 /*
- w ft_calloc function contiguously allocates enough space 
+ * ft_calloc function contiguously allocates enough space 
  * for count objects that are size bytes of memory each 
  * and returns a pointer to the allocated memory.
  * The allocated memory is filled with bytes of value zero.
  */
 void	*ft_calloc(size_t count, size_t size);
 
+/*
+ * ft_strdup allocates sufficine memory 
+ * for a copy of the string s1.
+ * if insufficient memory is available, NULL is returned. 
+ * alwans NULL terminating the copied string.
+ */
+char	*ft_strdup(const char *s1);
+
+// PART II
+
+/*
+ * s: The string from which to create the substring.
+ * start: The start index of the substring in the string ’s’.
+ * len: The maximum length of the substring.
+ * ft_substr returns the substring or NULL if allocation failed.
+ */
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+/*
+ * -> s1: The prefix string.
+ * -> s2: The suffix string.
+ */
+char	*ft_strjoin(char const *s1, char const *s2);
+
+/*
+ * -> s1: The string to be trimmed.
+ * -> set: The reference set of characters to trim.
+ * returns 
+ * -> the trimmed string.
+ * -> NULL if the allocation falis.
+ */
+char	*ft_strtrim(char const *s1, char const *set);
+
+/*
+ * ft_split:
+ * -> s: The string to be split.
+ * -> c: The delimiter character.
+ * returns
+ * -> The array of new strings.
+ * -> NULL if allocation fails.
+ */
+char	**ft_split(char const *s, char c);
 #endif
+
+

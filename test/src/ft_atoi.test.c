@@ -55,7 +55,7 @@ int ft_atoi_tests(void)
           .expected_output = atoi("2147483647"),
       },
       {
-          .desc = "ftatoi(\"-\")",
+          .desc = "ft_atoi(\"-\")",
           .s = "-",
           .expected_output = atoi("-"),
       },
@@ -65,7 +65,7 @@ int ft_atoi_tests(void)
           .expected_output = atoi("12 34"),
       },
       {
-          .desc = "atoi(\"   -12 34\")",
+          .desc = "ft_atoi(\"   -12 34\")",
           .s = "   -12 34",
           .expected_output = atoi("   -12 34"),
       },
@@ -75,7 +75,7 @@ int ft_atoi_tests(void)
           .expected_output = atoi("abc123"),
       },
       {
-          .desc = "atoi(\"123abc+\")",
+          .desc = "ft_atoi(\"123abc+\")",
           .s = "123abc+",
           .expected_output = atoi("123abc+"),
       },

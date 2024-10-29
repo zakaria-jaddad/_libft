@@ -6,7 +6,7 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:40:22 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/10/25 23:11:37 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/10/28 23:55:15 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -16,7 +16,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	unsigned char *tmp;
 
 	tmp = (unsigned char *) b;
-	while (len--)
+	while (len-- > 0)
 		*(tmp++) = (unsigned char) c;
 	return b;
 }
