@@ -1,15 +1,17 @@
 #include "../include/test.h"
+#include "../include/util.h"
+#include <stdio.h>
 
 typedef struct test
 {
   char *desc;
-  const char *s;
+  const void *s;
   int c;
   size_t n;
   char *expected_output;
 } ft_memchr_test;
 
-static int run_tests(ft_memchr_test *tests)
+static int run_string_tests(ft_memchr_test *tests)
 {
   int error = 0;
   while (tests->desc)
@@ -42,8 +44,37 @@ static int run_tests(ft_memchr_test *tests)
   return error;
 }
 
+static int run_byte_tests(ft_memchr_test *tests)
+{
+  int error = 0;
+  while (tests->desc)
+  {
+    char *result = ft_memchr(tests->s, tests->c, tests->n);
+    if (memcmp(tests->expected_output, result, tests->n))
+    {
+      printf(" " RED " %s Expected ", tests->desc);
+      print_byte_red(tests->expected_output, tests->n);
+      printf(" output ");
+      print_byte_red(result, tests->n);
+      printf("\n");
+      error++;
+    }
+    else
+    {
+      printf(" " GREEN CHECKMARK " %s Expected ", tests->desc);
+      print_byte_green(tests->expected_output, tests->n);
+      printf("output ");
+      print_byte_green(result, tests->n);
+      printf("\n");
+    }
+    tests++;
+  }
+  return error;
+}
+
 int ft_memchr_tests(void)
 {
+  int s[] = {-49, 49, 1, -1, 0, -2, 2};
   ft_memchr_test tests[] = {
       {
           .desc = "ft_memchr(\'Hello, World\', 'H', 0)",
@@ -90,6 +121,20 @@ int ft_memchr_tests(void)
       {
           .desc = 0,
       },
+
   };
-  return run_tests(tests);
+
+  ft_memchr_test byte_tests[] = {
+      {
+          .desc = "ft_memchr(\"{-49, 49, 1, -1, 0, -2, 2}\", \'-1\', 7)",
+          .s = (int[7]) {-49, 49, 1, -1, 0, -2, 2},
+          .c = -1,
+          .n = 7,
+          .expected_output = memchr(s, -1, 7),
+      },
+      {
+          .desc = 0,
+      },
+  };
+  return run_string_tests(tests) + run_byte_tests(byte_tests);
 }

@@ -17,7 +17,7 @@ int main(void)
   ft_toupper_tests();
   ft_tolower_tests();
   ft_strchr_tests();
-  /* ft_strrchr_tests(); */
+  ft_strrchr_tests();
   ft_strncmp_tests();
   ft_memchr_tests();
   ft_memcmp_tests();
@@ -29,6 +29,7 @@ int main(void)
   ft_strjoin_tests();
   ft_strtrim_tests();
   ft_split_tests();
+  ft_itoa_tests();
 
   return 0;
 }

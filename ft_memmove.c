@@ -6,12 +6,11 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 12:03:55 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/10/28 22:13:52 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/10/30 12:30:23 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-/* original hehello, World == not original helello, World */
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	const unsigned char	*tmp_src; 
@@ -31,4 +30,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		ft_memcpy(dst, src, len);
 	return (dst);
 }
-

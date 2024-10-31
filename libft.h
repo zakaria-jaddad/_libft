@@ -6,7 +6,7 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:19:49 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/10/29 03:32:16 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/10/31 13:20:37 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -243,6 +243,81 @@ char	*ft_strtrim(char const *s1, char const *set);
  * -> NULL if allocation fails.
  */
 char	**ft_split(char const *s, char c);
+
+/* ft_itoa inteder to ascii */
+char	*ft_itoa(int n);
+
+/* 
+ * -> s The string on which to intterate. 
+ * -> f the function to apply to each character.
+ * returns 
+ * -> The string from the successive applications of f.
+ * -> NULL if the allocation falis.
+ */
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+/* 
+ * -> s The string on which to intterate. 
+ * -> f the function to apply to each character.
+ * returns 
+ * -> The string from the successive applications of f.
+ * -> NULL if the allocation falis.
+ */
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+// ---- file descriptors functions ---- 
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+
+
+// ---- Linked list ---- 
+typedef struct s_list
+{
+	void *content;
+	struct s_list *next;
+} t_list;
+
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+
+/*
+ * Takes as a parameter a node and frees the memory of
+ * the node’s content using the function ’del’ given
+ * as a parameter and free the node. The memory of
+ * ’next’ must not be freed.
+ */
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+
+/* 
+ * Deletes and frees the given node and every
+ * successor of that node, using the function ’del’
+ * and free(3).
+ * Finally, the pointer to the list must be set to
+ * NULL.
+ */
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+
+/* 
+ * Iterates the list ’lst’ and applies the function
+ * ’f’ on the content of each node.
+ */
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+
+/* 
+ * Iterates the list ’lst’ and applies the function
+ * ’f’ on the content of each node. Creates a new
+ * list resulting of the successive applications of
+ * the function ’f’. The ’del’ function is used to
+ * delete the content of a node if needed.
+ */
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),
+		void (*del)(void *));
+
 #endif
 
 

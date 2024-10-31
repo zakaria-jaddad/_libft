@@ -6,16 +6,16 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 21:39:26 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/10/28 14:22:01 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/10/30 12:26:10 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void 	*ft_memchr(const void *s, int c, size_t n)
 {
-	char *tmp;
+	unsigned char *tmp;
 
-	tmp = (char *)s;
+	tmp = (unsigned char *)s;
 	while(n--)
 	{
 		if (*tmp == (unsigned char) c)

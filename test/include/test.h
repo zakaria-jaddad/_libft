@@ -27,6 +27,7 @@ int ft_strlcat_tests(void);
 int ft_toupper_tests(void);
 int ft_tolower_tests(void);
 int ft_strchr_tests(void);
+int ft_strrchr_tests(void);
 int ft_strncmp_tests(void);
 int ft_memchr_tests(void);
 int ft_memcmp_tests(void);
@@ -38,5 +39,6 @@ int ft_substr_tests(void);
 int ft_strjoin_tests(void);
 int ft_strtrim_tests(void);
 int ft_split_tests(void);
+int ft_itoa_tests(void);
 
 #endif

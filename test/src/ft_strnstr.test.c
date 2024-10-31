@@ -95,6 +95,24 @@ int ft_strnstr_tests(void)
           .expected_output = strnstr("Hello World", "llo", 4),
       },
       {
+          .desc = "ft_strnstr(\"A\", \"A\", 2)",
+          .haystack = "A",
+          .needle = "A",
+          .len = 2,
+          .expected_output = strnstr("A", "A", 2),
+      },
+      {
+          .desc = "ft_strnstr(\"is there a nyacat ?\", \"is there a nyacat "
+                  "?\", strlen(\"is there a nyacat ?\"))",
+          .haystack = "is there a nyacat ?",
+          .needle = "is there a nyacat ?",
+          .len = strlen("is there a nyacat ?"),
+          .expected_output =
+              strnstr("is there a nyacat ?", "is there a nyacat ?",
+                      strlen("is there a nyacat ?")),
+      },
+
+      {
           .desc = 0,
       },
   };

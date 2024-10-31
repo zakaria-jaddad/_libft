@@ -13,6 +13,7 @@ SRC = ft_isalpha.c	\
       ft_toupper.c 	\
       ft_tolower.c 	\
       ft_strchr.c 	\
+      ft_strrchr.c 	\
       ft_strncmp.c 	\
       ft_memchr.c 	\
       ft_memcmp.c 	\
@@ -24,6 +25,7 @@ SRC = ft_isalpha.c	\
       ft_strjoin.c 	\
       ft_strtrim.c	\
       ft_split.c	\
+      ft_itoa.c		\
 
 OBJ = $(SRC:.c=.o)
 NAME = libft.a

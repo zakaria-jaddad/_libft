@@ -6,7 +6,7 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:40:42 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/10/26 01:04:51 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/10/30 12:59:07 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -22,4 +22,3 @@ void 	*ft_memcpy(void *dst, const void *src, size_t n)
 		*dst_tmp++ = *src_tmp++;
 	return (dst);
 }
-

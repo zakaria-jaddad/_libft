@@ -215,7 +215,16 @@ int ft_strncmp_tests(void)
           .n = 4,
           .expected_output = strncmp("Hello", "Hellz", 4),
       },
-  };
+      {
+          .desc = "ft_strncmp(\"test\\200\", \"test\\0\", 6)",
+          .s1 = "test\200",
+          .s2 = "test\0",
+          .n = 6,
+          .expected_output = ft_strncmp("test\200", "test\0", 6),
+      },
+      {
+          .desc = 0,
+      }};
 
   return run_tests(tests);
 }
