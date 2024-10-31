@@ -74,6 +74,11 @@ int ft_itoa_tests(void)
           .expected_output = "-1",
       },
       {
+          .desc = "ft_itoa(-9)",
+          .c = -9,
+          .expected_output = "-9",
+      },
+      {
           .desc = "ft_itoa(1)",
           .c = 1,
           .expected_output = "1",
