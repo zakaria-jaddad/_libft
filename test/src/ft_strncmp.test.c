@@ -220,7 +220,7 @@ int ft_strncmp_tests(void)
           .s1 = "test\200",
           .s2 = "test\0",
           .n = 6,
-          .expected_output = ft_strncmp("test\200", "test\0", 6),
+          .expected_output = strncmp("test\200", "test\0", 6),
       },
       {
           .desc = 0,

@@ -6,11 +6,10 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:31:55 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/10/31 10:03:08 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/11/01 23:42:02 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
 
 static int	count_digit(int i)
 {
@@ -42,13 +41,16 @@ static void	reverse(char *s)
 	s[ft_strlen(s)] = 0;
 }
 
-static void	check_sign(long *long_n, int *sign)
+static int	check_sign(long *long_n, int *sign)
 {
 	if (*long_n < 0)
 	{
 		*long_n *= -1;
 		*sign = -1;
 	}
+	if (*sign == -1)
+		return (1);
+	return (0);
 }
 
 char	*ft_itoa(int n)
@@ -62,9 +64,8 @@ char	*ft_itoa(int n)
 	long_n = n;
 	n_length = count_digit(long_n);
 	sign = 1;
-	check_sign(&long_n, &sign);
 	i = 0;
-	ptr = (char *) malloc(n_length + 1);
+	ptr = (char *) malloc(n_length + 1 + check_sign(&long_n, &sign));
 	if (ptr == NULL)
 		return (NULL);
 	while (n_length--)

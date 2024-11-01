@@ -6,7 +6,7 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:34:07 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/10/29 02:42:05 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/11/01 15:37:47 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -18,6 +18,5 @@ size_t	ft_strlen(const char *s)
 	length = 0;
 	while (*s++)
 		length++;
-	return length;
+	return (length);
 }
-

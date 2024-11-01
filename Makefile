@@ -26,25 +26,47 @@ SRC = ft_isalpha.c	\
       ft_strtrim.c	\
       ft_split.c	\
       ft_itoa.c		\
+      ft_strmapi.c	\
+      ft_striteri.c	\
+      ft_putchar_fd.c	\
+      ft_putstr_fd.c	\
+      ft_putendl_fd.c	\
+      ft_putnbr_fd.c	\
+
+BSRC = ft_lstnew_bonus.c	\
+       ft_lstadd_front_bonus.c	\
+       ft_lstsize_bonus.c	\
+       ft_lstlast_bonus.c	\
+       ft_lstadd_back_bonus.c	\
+       ft_lstdelone_bonus.c	\
+       ft_lstclear_bonus.c	\
+       ft_lstiter_bonus.c	\
+       ft_lstmap_bonus.c	\
 
 OBJ = $(SRC:.c=.o)
+BOBJ = $(BSRC:.c=.o)
+
 NAME = libft.a
 CFLAGS = -Wall -Werror -Wextra 
-CC =  gcc
+INCLUDE = libft.h
+CC =  cc
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar -rcs $(NAME) $(OBJ)
 
-%.o: %.c
+bonus: $(NAME) $(BOBJ) 
+	ar -rcs $(NAME) $(BOBJ)
+
+%.o: %.c $(INCLUDE)
 	$(CC) $< $(CFLAGS) -c -o $@
 
 clean:
-	rm -rf $(OBJ)
+	rm -rf $(OBJ) $(BOBJ)
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -rf $(NAME) 
 
 re: fclean $(NAME)
 
@@ -53,5 +75,5 @@ main: main_clean main.c re
 
 main_clean: fclean
 	rm -rf main
-
-.PHONY: main_clean main
+	
+.PHONY: main_clean main clean

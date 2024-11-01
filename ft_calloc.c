@@ -6,14 +6,14 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 22:15:13 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/10/29 00:04:09 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/11/01 15:56:12 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	size_t 		len;
+	size_t			len;
 	unsigned char	*ptr;
 
 	len = count * size;
@@ -26,4 +26,3 @@ void	*ft_calloc(size_t count, size_t size)
 		*(ptr + len) = 0;
 	return (ptr);
 }
-

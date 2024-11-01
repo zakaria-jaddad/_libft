@@ -6,7 +6,7 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:27:03 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/10/27 12:07:42 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/11/01 15:44:17 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -15,5 +15,5 @@ int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c - 32);
-     return (c);
+	return (c);
 }

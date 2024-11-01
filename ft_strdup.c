@@ -6,16 +6,16 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 22:30:07 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/10/28 23:24:19 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/11/02 00:05:24 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
-	int	i;
-	int 	len;
-	char 	*ptr;
+	int		i;
+	int		len;
+	char	*ptr;
 
 	len = ft_strlen(s1);
 	i = 0;
@@ -30,4 +30,3 @@ char	*ft_strdup(const char *s1)
 	ptr[i] = 0;
 	return (ptr);
 }
-

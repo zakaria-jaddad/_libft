@@ -6,14 +6,14 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:29:23 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/10/27 11:53:16 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/11/01 15:37:05 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 int	ft_isprint(int c)
 {
-	if (c >= ' ' && c <= '~')	
+	if (c >= ' ' && c <= '~')
 		return (1);
 	return (0);
 }

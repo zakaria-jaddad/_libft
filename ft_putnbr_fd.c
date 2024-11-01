@@ -6,10 +6,11 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 10:05:27 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/10/31 10:54:39 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/11/01 21:49:05 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include <limits.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {

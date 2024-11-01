@@ -1,6 +1,4 @@
 #include "../include/test.h"
-#include <stdio.h>
-#include <string.h>
 
 typedef struct test
 {

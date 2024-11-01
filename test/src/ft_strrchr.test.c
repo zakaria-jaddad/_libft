@@ -58,8 +58,15 @@ int ft_strrchr_tests(void)
           .expected_output = strrchr("Bonjour", 's'),
       },
       {
+          .desc = "strrchr(\"tripouille\", 't' + 256)",
+          .s = "tripouille",
+          .c = 't' + 256,
+          .expected_output = strrchr("tripouille", 't' + 256),
+      },
+      {
           .desc = 0,
       },
+
   };
   return run_tests(tests);
 }

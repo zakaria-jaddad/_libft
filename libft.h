@@ -6,7 +6,7 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:19:49 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/10/31 13:20:37 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/11/01 16:18:15 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -192,7 +192,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
  */
 int		ft_atoi(const char *str);
 
-
 /*
  * ft_calloc function contiguously allocates enough space 
  * for count objects that are size bytes of memory each 
@@ -271,13 +270,12 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-
 // ---- Linked list ---- 
 typedef struct s_list
 {
-	void *content;
-	struct s_list *next;
-} t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
@@ -316,8 +314,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
  * delete the content of a node if needed.
  */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),
-		void (*del)(void *));
+			void (*del)(void *));
 
 #endif
-
-
