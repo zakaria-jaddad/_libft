@@ -6,12 +6,14 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 22:47:14 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/11/01 16:11:11 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/11/04 21:27:25 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (s == NULL)
+		return ;
 	write(fd, s, ft_strlen(s));
 }

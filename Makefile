@@ -70,10 +70,4 @@ fclean: clean
 
 re: fclean $(NAME)
 
-main: main_clean main.c re 
-	$(CC) main.c $(CFLAGS) -L. -lft -o $@
-
-main_clean: fclean
-	rm -rf main
-	
-.PHONY: main_clean main clean
+.PHONY: 

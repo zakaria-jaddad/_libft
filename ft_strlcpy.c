@@ -6,12 +6,10 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 12:43:32 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/10/24 14:52:06 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/11/03 17:51:11 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

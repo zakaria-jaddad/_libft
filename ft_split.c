@@ -6,12 +6,10 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 03:27:58 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/11/01 23:40:58 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/11/04 21:22:33 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 static int	count_words(char const *s, char c)
 {

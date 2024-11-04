@@ -6,12 +6,10 @@
 /*   By: zajaddad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 12:03:55 by zajaddad          #+#    #+#             */
-/*   Updated: 2024/11/01 19:22:53 by zajaddad         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:50:44 by zajaddad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -26,7 +24,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		tmp_src += len;
 		tmp_dst += len;
-		while (len-- > 0)
+		while (len--)
 			*--tmp_dst = *--tmp_src;
 		return (dst);
 	}
